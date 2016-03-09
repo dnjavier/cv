@@ -1,0 +1,49 @@
+<section class="first">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-5 text-right">
+          <img src="assets/images/photo1.png" class="img-responsive" alt="">         
+      </div> 
+      <div class="col-xs-12 col-md-7">
+        <h1>JAVIER DELGADO</h1>
+        <h3>Web developer</h3>
+        <ul>
+          <li><i class="fa fa-facebook"></i></li>
+          <li><i class="fa fa-twitter"></i></li>
+          <li><i class="fa fa-linkedin"></i></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+<section class="second">
+  <div class="text-center" ng-repeat="item in main.items">
+    <a ui-sref="{{ item.state }}">
+      <img ng-src="{{ item.img }}" class="img-responsive"
+          ng-mouseover="main.changeImg(item)"
+          ng-mouseleave="main.changeImgBack(item)">
+      <p>{{ item.title }}</p>
+    </a>        
+  </div>
+</section>
+
+<section class="third text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <i class="fa fa-mobile"></i>
+        <p>+506 8850-5706</p>
+      </div>
+      <div class="col-md-4">
+        <i class="fa fa-paper-plane"></i>
+        <p>info@ng-javier.com</p>
+      </div>
+      <div class="col-md-4">
+        <i class="fa fa-map-marker"></i>
+        <p>San Jose, Costa Rica.</p>
+      </div>
+    </div>
+  </div>      
+</section>

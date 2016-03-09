@@ -1,0 +1,40 @@
+.resume {
+  .container, h2 {
+    margin: 0;
+    padding: 0;
+  }
+
+  section > .container > .row > div {
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  .box {
+    background-color: #fdfdfd;
+    border: 1px solid #dfdfdf;
+    padding: 25px;
+
+    div {
+      background-color: #fdfdfd;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+  }
+
+  .text-right, .text-left {
+    display: inline-block;
+  }
+
+  .text-right {
+    float: right;
+  }
+
+  .text-left {
+    font-weight: bold;
+  }
+}
