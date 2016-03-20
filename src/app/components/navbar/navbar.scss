@@ -30,6 +30,13 @@
           font-size: 2rem;
           margin: 0;
         }
+
+        @media (max-width: 360px) {
+          padding: 0 0 0 12px;
+          h2 {
+            font-size: 4rem;
+          }
+        }
       }
 
       i {
@@ -38,6 +45,10 @@
 
         @media (max-width: 500px) {
           margin-left: -30px;
+        }
+
+        @media (max-width: 360px) {
+          font-size: 5rem;
         }
       }
 

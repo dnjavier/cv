@@ -8,9 +8,10 @@
         <h1>JAVIER DELGADO</h1>
         <h3>Web developer</h3>
         <ul>
-          <li><i class="fa fa-facebook"></i></li>
-          <li><i class="fa fa-twitter"></i></li>
-          <li><i class="fa fa-linkedin"></i></li>
+          <li><a target="_blank" href="https://www.facebook.com/dn.javier"><i class="fa fa-facebook"></i></a></li>
+          <li><a target="_blank" href="https://twitter.com/djaviern"><i class="fa fa-twitter"></i></a></li>
+          <li><a target="_blank" href="https://cr.linkedin.com/in/javier-delgado-84510a101"><i class="fa fa-linkedin"></i></a></li>
+          <li><a target="_blank" href="https://github.com/dnjavier"><i class="fa fa-github"></i></a></li>
         </ul>
       </div>
     </div>
@@ -20,7 +21,7 @@
 
 <section class="second">
   <div class="text-center" ng-repeat="item in main.items">
-    <a ui-sref="{{ item.state }}">
+    <a ui-sref="{{ item.state }}" ng-click="main.goToElement('header')">
       <img ng-src="{{ item.img }}" class="img-responsive"
           ng-mouseover="main.changeImg(item)"
           ng-mouseleave="main.changeImgBack(item)">
@@ -38,7 +39,7 @@
       </div>
       <div class="col-md-4">
         <i class="fa fa-paper-plane"></i>
-        <p>info@ng-javier.com</p>
+        <p>info@javier.tech</p>
       </div>
       <div class="col-md-4">
         <i class="fa fa-map-marker"></i>

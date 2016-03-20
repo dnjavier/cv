@@ -6,7 +6,7 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr) {
+  function MainController($timeout, webDevTec, toastr, $location, $anchorScroll) {
     var vm = this;
 
     vm.items = [
@@ -50,6 +50,11 @@
 
     vm.changeImgBack = function (item) {
       item.img = showImg;
+    }
+
+    vm.goToElement = function (element) {
+      $location.hash(element);
+      $anchorScroll();
     }
 
     vm.classAnimation = '';
