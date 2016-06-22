@@ -8,7 +8,8 @@
         'ui.router', 
         'ui.bootstrap', 
         'toastr', 
-        'chart.js'
+        'chart.js',
+        'contentful'
         ]);
 
 })();
