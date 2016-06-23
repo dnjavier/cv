@@ -15,6 +15,7 @@
   .box {
     background-color: #fdfdfd;
     border: 1px solid #dfdfdf;
+    border-top: none;
     padding: 25px;
 
     div {
@@ -24,6 +25,10 @@
     p {
       font-size: 2rem;
     }
+  }
+
+  .box:first-of-type {
+    border-top: 1px solid #dfdfdf;
   }
 
   .text-right, .text-left {

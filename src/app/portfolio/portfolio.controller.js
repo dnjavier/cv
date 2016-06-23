@@ -8,7 +8,7 @@
   /** @ngInject */
   function PortfolioController(contentful) {
     var vm = this;
-    vm.projects = [];
+    vm.projects = []; 
 
     vm.item = {
       img: 'assets/images/portfolio.png',
