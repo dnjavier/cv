@@ -7,25 +7,25 @@
         <div class="col-md-6">
           <h2>Contact info</h2>
           <div class="info-square">
-            <p class="text-left">Address</p>         
+            <p class="text-left">Address</p>
                 <p class="text-right">San Antonio de Escazu</p><br>
             <p class="text-left">Phone</p>
                 <p class="text-right">+506 8850 5706</p><br>
-            <p class="text-left">E-mail</p>       
+            <p class="text-left">E-mail</p>
                 <p class="text-right">info@javier.tech</p><br>
-            <p class="text-left">Skype</p>      
+            <p class="text-left">Skype</p>
                 <p class="text-right">dn.javier</p><br>
-            <p class="text-left">Website</p>      
+            <p class="text-left">Website</p>
                 <p class="text-right">www.javier.tech</p>
           </div>
         </div>
 
         <div class="col-md-6">
           <h2>Contact form</h2>
-          <form class="contact-form">
-            <input type="text" id="name" placeholder="Name">
-            <input type="email" id="email" placeholder="Email">
-            <textarea id="message" placeholder="Message"></textarea>
+          <form class="contact-form" method="POST" action="https://formspree.io/dn.javier@hotmail.com">
+            <input type="text" id="name" name="name" placeholder="Name">
+            <input type="email" id="email" name="email" placeholder="Email">
+            <textarea id="message" name="message" placeholder="Message"></textarea>
             <input type="submit" class="btn btn-color hover-animate" value="Send Message">
           </form>
         </div>
