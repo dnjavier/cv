@@ -20,6 +20,10 @@
     vm.labels = ['', ''];
     vm.data = [50, 50];
     vm.colours = ['#00B6F9','#FFFFFF'];
-
+    vm.green = ['#7fc857','#FFFFFF'];
+    vm.red = ['#dd1b16','#FFFFFF'];
+    vm.black = ['#353535','#FFFFFF'];
+    vm.brown = ['#6e4e37','#FFFFFF'];
+    
   }
 })();
