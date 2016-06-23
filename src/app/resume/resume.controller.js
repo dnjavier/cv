@@ -9,6 +9,7 @@
   function ResumeController(contentful) {
     var vm = this;
     vm.jobs = [];
+    vm.studies = [];
 
     vm.item = {
       img: 'assets/images/resume.png',
@@ -28,6 +29,10 @@
           for (var i = entries.items.length - 1; i >= 0; i--) {
             if(entries.items[i].sys.contentType.sys.id == 'work'){
               vm.jobs.push(entries.items[i]);
+            }
+
+            if(entries.items[i].sys.contentType.sys.id == 'studies'){
+              vm.studies.push(entries.items[i]);
             }
           }
         },
