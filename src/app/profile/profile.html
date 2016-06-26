@@ -5,8 +5,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-7 brief">
-          <h2>Hello, I am web developer</h2>
-          <p>I am coursing system engineering at ULACIT. This university has been important for my professional development for all my improve in leadership that I have acquired and the opportunities that they have given to me for trainings in areas of my career and being in conferences like EXPOTELECOM. Working in the student’s government has made me a person who knows how to deal with different kinds of people, people who think different than me. I have got the ability to communicate, deal and negotiate with people to take forward work.</p>
+          <h2>{{ profile.info.title }}</h2>
+          <p>{{ profile.info.description }}</p>
           <a ui-sref="contact" class="btn">Contact me</a>
           <a target="_self" href="assets/Javier-Delgado.pdf" download="javier-delgado-cv.pdf" class="btn btn-color">Download CV</a>
         </div>
@@ -14,15 +14,15 @@
         <div class="col-md-5">
           <div class="info-square">
             <p class="text-left">Name</p>         
-                <p class="text-right">Javier Delgado</p><br>
+                <p class="text-right">{{ profile.info.name }}</p><br>
             <p class="text-left">E-mail</p>       
-                <p class="text-right">info@javier.tech</p><br>
+                <p class="text-right">{{ profile.info.email }}</p><br>
             <p class="text-left">Address</p>      
-                <p class="text-right">San Antonio, Escazu</p><br>
+                <p class="text-right">{{ profile.info.address }}</p><br>
             <p class="text-left">Phone</p>        
-                <p class="text-right">+506 8850-5706</p><br>
+                <p class="text-right">{{ profile.info.phone }}</p><br>
             <p class="text-left">Website</p>      
-                <p class="text-right">www.javier.tech</p>
+                <p class="text-right">{{ profile.info.website }}</p>
           </div>
         </div>
       </div>

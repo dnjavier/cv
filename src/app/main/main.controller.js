@@ -6,8 +6,9 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr, $location, $anchorScroll) {
+  function MainController($timeout, webDevTec, toastr, $location, $anchorScroll, contentful) {
     var vm = this;
+    vm.profile;
 
     vm.items = [
     {
@@ -73,6 +74,21 @@
       toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
       vm.classAnimation = '';
     }
+
+    // Get entry with profile info
+    contentful
+      .entry("5OoeqHSUaAGWAWySWw6MGQ")
+      .then(
+        // Success handler
+        function(response){
+          vm.profile = response.data.fields;
+        },
+        // Error handler
+        function(response){
+          console.log('Oops, error ' + response.status);
+          console.log(response);
+        }
+      );
 
   }
 })();

@@ -5,13 +5,13 @@
           <img src="assets/images/photo1.png" class="img-responsive" alt="">
       </div>
       <div class="col-xs-12 col-md-7 ">
-          <h1>JAVIER DELGADO</h1>
-          <h3>Web developer</h3>
+          <h1>{{ main.profile.name }}</h1>
+          <h3>{{ main.profile.post }}</h3>
           <ul>
-            <li><a target="_blank" href="https://www.facebook.com/dn.javier"><i class="fa fa-facebook"></i></a></li>
-            <li><a target="_blank" href="https://twitter.com/djaviern"><i class="fa fa-twitter"></i></a></li>
-            <li><a target="_blank" href="https://cr.linkedin.com/in/javier-delgado-84510a101"><i class="fa fa-linkedin"></i></a></li>
-            <li><a target="_blank" href="https://github.com/dnjavier"><i class="fa fa-github"></i></a></li>
+            <li><a target="_blank" href="{{ main.profile.facebookUrl }}"><i class="fa fa-facebook"></i></a></li>
+            <li><a target="_blank" href="{{ main.profile.twitterUrl }}"><i class="fa fa-twitter"></i></a></li>
+            <li><a target="_blank" href="{{ main.profile.linkedInUrl }}"><i class="fa fa-linkedin"></i></a></li>
+            <li><a target="_blank" href="{{ main.profile.gitHubUrl }}"><i class="fa fa-github"></i></a></li>
           </ul>
       </div>
     </div>
@@ -35,15 +35,15 @@
     <div class="row">
       <div class="col-md-4">
         <i class="fa fa-mobile"></i>
-        <p>+506 8850-5706</p>
+        <p>{{ main.profile.phone }}</p>
       </div>
       <div class="col-md-4">
         <i class="fa fa-paper-plane"></i>
-        <p>info@javier.tech</p>
+        <p>{{ main.profile.email }}</p>
       </div>
       <div class="col-md-4">
         <i class="fa fa-map-marker"></i>
-        <p>San Jose, Costa Rica.</p>
+        <p>{{ main.profile.province }}</p>
       </div>
     </div>
   </div>

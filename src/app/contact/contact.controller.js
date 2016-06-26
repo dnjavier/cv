@@ -6,8 +6,9 @@
     .controller('ContactController', ContactController);
 
   /** @ngInject */
-  function ContactController() {
+  function ContactController(contentful) {
     var vm = this;
+    vm.profile;
 
     vm.item = {
       img: 'assets/images/contact.png',
@@ -17,6 +18,20 @@
       desc: 'Get in touch with me'
     };
 
+    // Get entry with profile info
+    contentful
+      .entry("5OoeqHSUaAGWAWySWw6MGQ")
+      .then(
+        // Success handler
+        function(response){
+          vm.profile = response.data.fields;
+        },
+        // Error handler
+        function(response){
+          console.log('Oops, error ' + response.status);
+          console.log(response);
+        }
+      );
 
   }
 })();
