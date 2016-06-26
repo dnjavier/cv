@@ -1,0 +1,61 @@
+.blog {
+  .container {
+    margin: 0;
+    margin-bottom: 25px;
+  }
+
+  .row > div {
+    padding: 0;
+  }
+
+  .large {
+    height: 500px;
+  }
+
+  .medium {
+    height: 300px;
+  }
+
+  .small {
+    height: 200px;
+  }
+
+  .wrap {
+    position: relative;
+    padding: 6px 3px;
+    height: inherit;
+    & > div {
+      height: inherit;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    } 
+  }
+
+  .box {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    bottom: 0;
+    padding: 15px;
+    color: white;
+
+    &.lg {
+      height: 150px;
+    }
+    &.md {
+      height: 110px;
+      h2 {
+        margin: 5px 0;
+        font-size: 20px;
+      }
+    }
+    &.sm {
+      height: 80px;
+      h2 {
+        margin: 0;
+        font-size: 20px;
+      }
+    }
+  }
+}

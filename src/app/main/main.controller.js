@@ -77,11 +77,17 @@
 
     // Get entry with profile info
     contentful
-      .entry("5OoeqHSUaAGWAWySWw6MGQ")
+      .entries()
       .then(
         // Success handler
         function(response){
-          vm.profile = response.data.fields;
+          var entries = response.data.items;
+          console.log(entries);
+          for (var i = entries.length - 1; i >= 0; i--) {
+            if(entries[i].sys.contentType.sys.id == 'profile'){
+              vm.profile = entries[i].fields;
+            }
+          }
         },
         // Error handler
         function(response){
