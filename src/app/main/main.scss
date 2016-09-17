@@ -113,6 +113,11 @@ section.first {
 
     img {
       float: right;
+
+      &.secundary {
+        float: none;
+        margin: 0;
+      }
     }
   }
 
