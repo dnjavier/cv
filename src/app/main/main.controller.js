@@ -6,7 +6,7 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr, $location, $anchorScroll, contentful) {
+  function MainController($timeout, $log, webDevTec, toastr, $location, $anchorScroll, contentful) {
     var vm = this;
     vm.profile;
 
@@ -82,7 +82,6 @@
         // Success handler
         function(response){
           var entries = response.data.items;
-          console.log(entries);
           for (var i = entries.length - 1; i >= 0; i--) {
             if(entries[i].sys.contentType.sys.id == 'profile'){
               vm.profile = entries[i].fields;
@@ -91,8 +90,8 @@
         },
         // Error handler
         function(response){
-          console.log('Oops, error ' + response.status);
-          console.log(response);
+          $log.log('Oops, error ' + response.status);
+          $log.log(response);
         }
       );
 

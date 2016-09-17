@@ -6,7 +6,7 @@
     .controller('PortfolioController', PortfolioController);
 
   /** @ngInject */
-  function PortfolioController(contentful) {
+  function PortfolioController(contentful, $log) {
     var vm = this;
     vm.projects = []; 
 
@@ -33,8 +33,8 @@
         },
         // Error handler
         function(response){
-          console.log('Oops, error ' + response.status);
-          console.log(response);
+          $log.log('Oops, error ' + response.status);
+          $log.log(response);
         }
       );
   }

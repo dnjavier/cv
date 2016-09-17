@@ -6,7 +6,7 @@
     .controller('ContactController', ContactController);
 
   /** @ngInject */
-  function ContactController(contentful) {
+  function ContactController(contentful, $log) {
     var vm = this;
     vm.profile;
 
@@ -28,8 +28,8 @@
         },
         // Error handler
         function(response){
-          console.log('Oops, error ' + response.status);
-          console.log(response);
+          $log.log('Oops, error ' + response.status);
+          $log.log(response);
         }
       );
 

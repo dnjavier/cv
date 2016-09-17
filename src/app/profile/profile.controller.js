@@ -6,7 +6,7 @@
     .controller('ProfileController', ProfileController);
 
   /** @ngInject */
-  function ProfileController(contentful) {
+  function ProfileController(contentful, $log) {
     var vm = this;
     vm.info;
 
@@ -36,8 +36,8 @@
         },
         // Error handler
         function(response){
-          console.log('Oops, error ' + response.status);
-          console.log(response);
+          $log.log('Oops, error ' + response.status);
+          $log.log(response);
         }
       );
     

@@ -6,7 +6,7 @@
     .controller('ResumeController', ResumeController);
 
   /** @ngInject */
-  function ResumeController(contentful) {
+  function ResumeController(contentful, $log) {
     var vm = this;
     vm.jobs = [];
     vm.studies = [];
@@ -38,8 +38,8 @@
         },
         // Error handler
         function(response){
-          console.log('Oops, error ' + response.status);
-          console.log(response);
+          $log.log('Oops, error ' + response.status);
+          $log.log(response);
         }
       );
   }
