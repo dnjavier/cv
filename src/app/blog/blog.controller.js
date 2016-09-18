@@ -32,9 +32,6 @@
           }
 
           vm.entries.sort(function(a,b){
-            $log.log(a);
-            // Turn your strings into dates, and then subtract them
-            // to get a value that is either negative, positive, or zero.
             return new Date(b.sys.createdAt) - new Date(a.sys.createdAt);
           });
         },

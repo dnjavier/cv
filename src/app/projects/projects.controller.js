@@ -3,25 +3,24 @@
 
   angular
     .module('portfolio')
-    .controller('EntriesController', EntriesController);
+    .controller('ProjectsController', ProjectsController);
 
   /** @ngInject */
-  function EntriesController($log, $stateParams, contentful, $state) {
+  function ProjectsController($log, $stateParams, contentful, $state) {
     var vm = this;
-    vm.entries = [{}];
-    vm.entry = {};
-    vm.idEntry = $stateParams.idEntry;
+    vm.project = {};
+    vm.idProject = $stateParams.idProject;
 
-    if(vm.idEntry == '') {
-      $state.go('blog');
+    if(vm.idProject == '') {
+      $state.go('portfolio');
     }
 
     vm.item = {
-      img: 'assets/images/blog.png',
-      gif: 'assets/images/blog.gif',
-      title: 'Blog',
-      state: 'blog',
-      desc: 'This is my thought'
+      img: 'assets/images/portfolio.png',
+      gif: 'assets/images/portfolio.gif',
+      title: 'Portfolio',
+      state: 'portfolio',
+      desc: 'Some of My Works'
     };
 
     // Get all entries
@@ -32,11 +31,12 @@
         function(response){
           var entries = response.data;
           for (var i = entries.items.length - 1; i >= 0; i--) {
-            if(entries.items[i].sys.id == vm.idEntry){
-              vm.entry = entries.items[i];
+            if(entries.items[i].sys.id == vm.idProject){
+              vm.project = entries.items[i];
               break;
             }
           }
+          $log.log(vm.project);
         },
         // Error handler
         function(response){
