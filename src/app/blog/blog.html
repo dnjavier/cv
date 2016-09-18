@@ -5,11 +5,11 @@
     <div class="row">
         <div class="col-md-6">
           <div class="large">
-            <div class="wrap" ui-sref="entries({ idEntry: blog.entries[0].fields.id })">
-              <div style="background-image: url('{{blog.entries[0].fields.imageURL}}');">
+            <div class="wrap" ui-sref="entries({ idEntry: blog.entries[0].sys.id })">
+              <div style="background-image: url('{{blog.entries[0].fields.images[0].fields.file.url}}');">
                 <div class="box lg">
                   <h2>{{blog.entries[0].fields.title}}</h2>
-                  <p>{{blog.entries[0].fields.intro}}</p>
+                  <p>{{blog.entries[0].fields.introduction}}</p>
                 </div>
               </div>
             </div>
@@ -17,18 +17,18 @@
         </div>
         <div class="col-md-3">
           <div class="medium">
-            <div class="wrap" ui-sref="entries({ idEntry: blog.entries[1].fields.id })">
-              <div style="background-image: url('{{blog.entries[1].fields.imageURL}}');">
+            <div class="wrap" ui-sref="entries({ idEntry: blog.entries[1].sys.id })">
+              <div style="background-image: url('{{blog.entries[1].fields.images[0].fields.file.url}}');">
                 <div class="box md">
                   <h2>{{blog.entries[1].fields.title}}</h2>
-                  <p>{{blog.entries[1].fields.intro}}</p>
+                  <p>{{blog.entries[1].fields.introduction}}</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="small">
-            <div class="wrap" ui-sref="entries({ idEntry: blog.entries[2].fields.id })">
-              <div style="background-image: url('{{blog.entries[2].fields.imageURL}}');">
+            <div class="wrap" ui-sref="entries({ idEntry: blog.entries[2].sys.id })">
+              <div style="background-image: url('{{blog.entries[2].fields.images[0].fields.file.url}}');">
                 <div class="box sm">
                   <h2>{{blog.entries[2].fields.title}}</h2>
                   <p>{{blog.entries[2].fields.intro}}</p>
@@ -39,8 +39,8 @@
         </div>
         <div class="col-md-3">
           <div class="small">
-            <div class="wrap" ui-sref="entries({ idEntry: blog.entries[3].fields.id })">
-              <div style="background-image: url('{{blog.entries[3].fields.imageURL}}');">
+            <div class="wrap" ui-sref="entries({ idEntry: blog.entries[3].sys.id })">
+              <div style="background-image: url('{{blog.entries[3].fields.images[0].fields.file.url}}');">
                 <div class="box sm">
                   <h2>{{blog.entries[3].fields.title}}</h2>
                   <p>{{blog.entries[3].fields.intro}}</p>
@@ -49,8 +49,8 @@
             </div>
           </div>
           <div class="medium">
-            <div class="wrap" ui-sref="entries({ idEntry: blog.entries[4].fields.id })">
-              <div style="background-image: url('{{blog.entries[4].fields.imageURL}}');">
+            <div class="wrap" ui-sref="entries({ idEntry: blog.entries[4].sys.id })">
+              <div style="background-image: url('{{blog.entries[4].fields.images[0].fields.file.url}}');">
                 <div class="box md">
                   <h2>{{blog.entries[4].fields.title}}</h2>
                   <p>{{blog.entries[4].fields.intro}}</p>

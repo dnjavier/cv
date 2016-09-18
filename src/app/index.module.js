@@ -9,7 +9,9 @@
         'ui.bootstrap', 
         'toastr', 
         'chart.js',
-        'contentful'
+        'contentful',
+        'ngSanitize',
+        'ng-showdown'
         ]);
 
 })();

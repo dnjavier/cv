@@ -2,15 +2,15 @@
 
 <div class="entry">
   <div class="bg-img">
-    <img ng-src="{{entry.entry.imageURL}}" class="img-responsive" alt="">
+    <img ng-src="{{entry.entry.fields.images[0].fields.file.url}}" class="img-responsive" alt="">
   </div>
   <div class="container">
     <div class="title">
-      <h1>{{entry.entry.title}}</h1>
+      <h1>{{entry.entry.fields.title}}</h1>
     </div>
     <div class="row">
       <div class="col-md-12 description">
-        <p>{{entry.entry.info}}</p>
+        <p markdown-to-html="entry.entry.fields.description"></p>
       </div>
     </div>
   </div>
