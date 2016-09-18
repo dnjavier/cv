@@ -1,0 +1,30 @@
+.entry {
+
+  .bg-img {
+    margin-top: -25px;
+    max-height: 560px;
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  .container {
+    margin-top: 0;
+    position: relative;
+  }
+
+  .title {
+    position: absolute;
+    top: -40px;
+    padding: 0 25px;
+    z-index: 1;
+  }
+
+  .description {
+    margin-top: 50px;
+  }
+
+}

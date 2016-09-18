@@ -3,26 +3,28 @@
 
   angular
     .module('portfolio')
-    .controller('BlogController', BlogController);
+    .controller('EntriesController', EntriesController);
 
   /** @ngInject */
-  function BlogController($log) {
+  function EntriesController($log, $stateParams) {
     var vm = this;
     vm.entries = [{}];
+    vm.entry = {};
+    vm.idEntry = $stateParams.idEntry;
 
     vm.item = {
       img: 'assets/images/blog.png',
       gif: 'assets/images/blog.gif',
       title: 'Blog',
       state: 'blog',
-      desc: 'I write here my thoughts'
+      desc: 'This is my thought'
     };
 
     vm.entries[0].fields = {
       id: '0',
       title: 'Project selected by people',
       intro: 'After the hackathon, we received an invitation to participate in a event where the public were going to choose a project.',
-      info: '',
+      info: 'After the hackathon, we received an invitation to participate in a event where the public were going to choose a project.',
       imageURL: 'images/hackathon-premio.jpg'
     };
 
@@ -61,6 +63,8 @@
       info: '',
       imageURL: 'images/eco-in.jpeg'
     };
+
+    vm.entry = vm.entries[vm.idEntry].fields;
 
   }
 })();

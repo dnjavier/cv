@@ -24,6 +24,8 @@
     position: relative;
     padding: 6px 3px;
     height: inherit;
+    cursor: pointer;
+    
     & > div {
       height: inherit;
       background-position: center;
