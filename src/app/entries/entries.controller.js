@@ -6,7 +6,7 @@
     .controller('EntriesController', EntriesController);
 
   /** @ngInject */
-  function EntriesController($log, $stateParams, contentful, $state, $sce) {
+  function EntriesController($log, $stateParams, contentful, $state) {
     var vm = this;
     vm.entries = [{}];
     vm.entry = {};

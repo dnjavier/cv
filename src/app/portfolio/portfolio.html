@@ -16,7 +16,7 @@
 
       <div class="row">
       
-        <div class="col-md-4" ng-repeat="project in portfolio.projects">
+        <div class="col-md-4" ng-repeat="project in portfolio.projects | orderBy: '-sys.createdAt'">
           <div class="project">
             <img src="{{project.fields.screenshot.fields.file.url}}" alt="">
             <div class="item">
